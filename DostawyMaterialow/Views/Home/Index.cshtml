@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Dostawa>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+
+<div>
+    @foreach(var dostawa in Model)
+    {
+    <div>
+        <h2>Średnica: @dostawa.Srednica</h2>
+        <h5>Gatunek: @dostawa.Gatunek</h5>
+        <h5>Masa: @dostawa.Masa</h5>
+        <h5>Data dostawy: @dostawa.DataDostawy</h5>
+        <h6>Długość: @dostawa.Dlugosc</h6>
+        <h6>Dostawca: @dostawa.Dostawca</h6>
+        <h6>Wytop: @dostawa.Wytop</h6>
+        <br/>
+
+    </div>
+    }
+</div>
+
