@@ -1,0 +1,63 @@
+﻿@model DostawyMaterialow.Models.Dostawa
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Usuwanie materiału</h1>
+
+<h3>Czy na pewno chcesz usunąć ten materiał? </h3>
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gatunek)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gatunek)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wytop)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wytop)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Srednica)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Srednica)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dlugosc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dlugosc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Masa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Masa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataDostawy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataDostawy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dostawca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dostawca)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Powrót do listy</a>
+    </form>
+</div>

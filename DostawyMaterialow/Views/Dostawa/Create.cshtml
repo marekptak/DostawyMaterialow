@@ -1,0 +1,63 @@
+﻿@model DostawyMaterialow.Models.Dostawa
+
+@{
+    ViewData["Title"] = "Dodaj materiał";
+}
+
+<h1>Wprowadź kolejny materiał</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Gatunek" class="control-label"></label>
+                <input asp-for="Gatunek" class="form-control" />
+                <span asp-validation-for="Gatunek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wytop" class="control-label"></label>
+                <input asp-for="Wytop" class="form-control" />
+                <span asp-validation-for="Wytop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Srednica" class="control-label"></label>
+                <input asp-for="Srednica" class="form-control" />
+                <span asp-validation-for="Srednica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dlugosc" class="control-label"></label>
+                <input asp-for="Dlugosc" class="form-control" />
+                <span asp-validation-for="Dlugosc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Masa" class="control-label"></label>
+                <input asp-for="Masa" class="form-control" />
+                <span asp-validation-for="Masa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDostawy" class="control-label"></label>
+                <input asp-for="DataDostawy" class="form-control" />
+                <span asp-validation-for="DataDostawy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dostawca" class="control-label"></label>
+                <input asp-for="Dostawca" class="form-control" />
+                <span asp-validation-for="Dostawca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Powrót do listy</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
